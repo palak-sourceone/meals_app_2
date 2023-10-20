@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app_2/notifier/tabs_notifier.dart';
+import 'package:meals_app_2/screens/categories_screen.dart';
 import 'package:meals_app_2/screens/favorites_screen.dart';
-import 'package:meals_app_2/screens/meals_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   SelectedTabNotifier selectedTabNotifier = SelectedTabNotifier(0);
   List<Widget> pages = <Widget>[
-    const MealsScreen(),
+    const CategoriesScreen(),
     const FavoritesScreen(),
   ];
 
