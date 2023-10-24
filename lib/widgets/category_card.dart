@@ -5,15 +5,15 @@ class CategoryCard extends StatelessWidget {
   const CategoryCard({
     super.key,
     required this.category,
+    required this.onSelectCategory,
   });
   final Category category;
+  final Function() onSelectCategory;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        print(category);
-      },
+      onTap: onSelectCategory,
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(20),
       child: Container(
