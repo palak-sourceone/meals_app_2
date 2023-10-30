@@ -45,22 +45,18 @@ class CounterController {
             }
 
             break;
-
-          case Event.decrement:
-            // counter -= a;
-            break;
           default:
         }
-        // counterSink.add(favoriteMeals);
+        counterSink.add(favoriteMeals);
       },
     );
     return added;
   }
 
   // dispose the listner to eliminate memory leak
-  // dispose() {
-  //   listener?.cancel();
-  //   _counterController.close();
-  //   _eventController.close();
-  // }
+  dispose() {
+    listener?.cancel();
+    _counterController.close();
+    _eventController.close();
+  }
 }
